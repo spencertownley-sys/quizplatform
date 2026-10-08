@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1d1a17;
+  --color-paper: #faf7f2;
+  --color-muted: #6f675e;
+  --color-line: #e6dfd4;
+  --color-accent: #3f5bd8;
+  --color-accent-soft: #e8ecfb;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Paid-report preview: readable shape, unreadable words. */
+.locked {
+  filter: blur(5px);
+  user-select: none;
+  pointer-events: none;
+}
