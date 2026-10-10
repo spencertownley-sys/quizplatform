@@ -8,6 +8,13 @@
       "when": 1791443870460,
       "tag": "0000_init",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791673171518,
+      "tag": "0001_wave1_platform",
+      "breakpoints": true
     }
   ]
 }

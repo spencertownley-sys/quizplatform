@@ -1,0 +1,80 @@
+import type { LikertQuestion } from "@/lib/engine/types";
+
+/**
+ * 60 original items in the short public-domain IPIP style (not the official IPIP-NEO).
+ * 5 traits x 6 facets x 2 items. Within each trait the list mixes keying so
+ * forward and reverse items alternate; the quiz file interleaves the traits.
+ * 28 of 60 items are reverse-keyed (Self-efficacy and Altruism keep two forward items).
+ */
+export const traitItems: Record<"openness" | "conscientiousness" | "extraversion" | "agreeableness" | "neuroticism", LikertQuestion[]> = {
+  openness: [
+    { id: "o1", kind: "likert", dimension: "openness", facet: "imagination", text: "I love to daydream and imagine new worlds." },
+    { id: "o2", kind: "likert", dimension: "openness", facet: "artistic_interests", text: "Art museums and concerts bore me.", reverse: true },
+    { id: "o3", kind: "likert", dimension: "openness", facet: "emotionality", text: "I feel my emotions deeply." },
+    { id: "o4", kind: "likert", dimension: "openness", facet: "adventurousness", text: "I prefer to stick with what I know.", reverse: true },
+    { id: "o5", kind: "likert", dimension: "openness", facet: "intellect", text: "I enjoy thinking about complex ideas." },
+    { id: "o6", kind: "likert", dimension: "openness", facet: "liberalism", text: "I prefer to follow traditions without questioning them.", reverse: true },
+    { id: "o7", kind: "likert", dimension: "openness", facet: "imagination", text: "I don't spend much time imagining things.", reverse: true },
+    { id: "o8", kind: "likert", dimension: "openness", facet: "artistic_interests", text: "I see beauty in things that others might not notice." },
+    { id: "o9", kind: "likert", dimension: "openness", facet: "emotionality", text: "I rarely notice my own emotional reactions.", reverse: true },
+    { id: "o10", kind: "likert", dimension: "openness", facet: "adventurousness", text: "I like trying things I've never done before." },
+    { id: "o11", kind: "likert", dimension: "openness", facet: "intellect", text: "Abstract ideas don't interest me much.", reverse: true },
+    { id: "o12", kind: "likert", dimension: "openness", facet: "liberalism", text: "I question rules that don't make sense to me." },
+  ],
+  conscientiousness: [
+    { id: "c1", kind: "likert", dimension: "conscientiousness", facet: "self_efficacy", text: "I usually find a way to get things done." },
+    { id: "c2", kind: "likert", dimension: "conscientiousness", facet: "orderliness", text: "I often leave my things lying around.", reverse: true },
+    { id: "c3", kind: "likert", dimension: "conscientiousness", facet: "dutifulness", text: "I keep my promises, even when it's inconvenient." },
+    { id: "c4", kind: "likert", dimension: "conscientiousness", facet: "achievement_striving", text: "I do just enough work to get by.", reverse: true },
+    { id: "c5", kind: "likert", dimension: "conscientiousness", facet: "self_discipline", text: "I get chores done right away." },
+    { id: "c6", kind: "likert", dimension: "conscientiousness", facet: "cautiousness", text: "I often act without thinking.", reverse: true },
+    { id: "c7", kind: "likert", dimension: "conscientiousness", facet: "self_efficacy", text: "I feel confident I can handle what comes my way." },
+    { id: "c8", kind: "likert", dimension: "conscientiousness", facet: "orderliness", text: "I like to keep my things neat and organized." },
+    { id: "c9", kind: "likert", dimension: "conscientiousness", facet: "dutifulness", text: "I sometimes skip things I've agreed to do.", reverse: true },
+    { id: "c10", kind: "likert", dimension: "conscientiousness", facet: "achievement_striving", text: "I push myself to do my very best work." },
+    { id: "c11", kind: "likert", dimension: "conscientiousness", facet: "self_discipline", text: "I waste a lot of time before getting started.", reverse: true },
+    { id: "c12", kind: "likert", dimension: "conscientiousness", facet: "cautiousness", text: "I think things through before I decide." },
+  ],
+  extraversion: [
+    { id: "e1", kind: "likert", dimension: "extraversion", facet: "friendliness", text: "I make friends easily." },
+    { id: "e2", kind: "likert", dimension: "extraversion", facet: "gregariousness", text: "I avoid crowds when I can.", reverse: true },
+    { id: "e3", kind: "likert", dimension: "extraversion", facet: "assertiveness", text: "I take charge when a group needs direction." },
+    { id: "e4", kind: "likert", dimension: "extraversion", facet: "activity_level", text: "I like to take life at a slow, easy pace.", reverse: true },
+    { id: "e5", kind: "likert", dimension: "extraversion", facet: "excitement_seeking", text: "I love excitement and big thrills." },
+    { id: "e6", kind: "likert", dimension: "extraversion", facet: "cheerfulness", text: "I rarely joke around or laugh out loud.", reverse: true },
+    { id: "e7", kind: "likert", dimension: "extraversion", facet: "friendliness", text: "I keep people at a distance.", reverse: true },
+    { id: "e8", kind: "likert", dimension: "extraversion", facet: "gregariousness", text: "I love big parties and gatherings." },
+    { id: "e9", kind: "likert", dimension: "extraversion", facet: "assertiveness", text: "I wait for others to lead the way.", reverse: true },
+    { id: "e10", kind: "likert", dimension: "extraversion", facet: "activity_level", text: "I'm always busy and on the go." },
+    { id: "e11", kind: "likert", dimension: "extraversion", facet: "excitement_seeking", text: "I'd rather skip noisy, hectic events.", reverse: true },
+    { id: "e12", kind: "likert", dimension: "extraversion", facet: "cheerfulness", text: "I often feel happy and upbeat." },
+  ],
+  agreeableness: [
+    { id: "a1", kind: "likert", dimension: "agreeableness", facet: "trust", text: "I believe most people mean well." },
+    { id: "a2", kind: "likert", dimension: "agreeableness", facet: "morality", text: "I'll use flattery to get ahead.", reverse: true },
+    { id: "a3", kind: "likert", dimension: "agreeableness", facet: "altruism", text: "I go out of my way to help others." },
+    { id: "a4", kind: "likert", dimension: "agreeableness", facet: "cooperation", text: "I can be sharp-tongued when someone crosses me.", reverse: true },
+    { id: "a5", kind: "likert", dimension: "agreeableness", facet: "modesty", text: "I'd rather not draw attention to my achievements." },
+    { id: "a6", kind: "likert", dimension: "agreeableness", facet: "sympathy", text: "Other people's struggles don't affect me much.", reverse: true },
+    { id: "a7", kind: "likert", dimension: "agreeableness", facet: "trust", text: "I'm suspicious of other people's motives.", reverse: true },
+    { id: "a8", kind: "likert", dimension: "agreeableness", facet: "morality", text: "I tell the truth even when a small lie would be easier." },
+    { id: "a9", kind: "likert", dimension: "agreeableness", facet: "altruism", text: "I make time for people who need a hand." },
+    { id: "a10", kind: "likert", dimension: "agreeableness", facet: "cooperation", text: "I'd rather compromise than argue." },
+    { id: "a11", kind: "likert", dimension: "agreeableness", facet: "modesty", text: "I think I'm better than most people.", reverse: true },
+    { id: "a12", kind: "likert", dimension: "agreeableness", facet: "sympathy", text: "I feel for people who are going through a hard time." },
+  ],
+  neuroticism: [
+    { id: "n1", kind: "likert", dimension: "neuroticism", facet: "anxiety", text: "I worry about things that might go wrong." },
+    { id: "n2", kind: "likert", dimension: "neuroticism", facet: "anger", text: "I rarely lose my temper.", reverse: true },
+    { id: "n3", kind: "likert", dimension: "neuroticism", facet: "low_mood", text: "I often feel down or blue." },
+    { id: "n4", kind: "likert", dimension: "neuroticism", facet: "self_consciousness", text: "I don't get embarrassed easily.", reverse: true },
+    { id: "n5", kind: "likert", dimension: "neuroticism", facet: "immoderation", text: "I give in to cravings even when I know better." },
+    { id: "n6", kind: "likert", dimension: "neuroticism", facet: "vulnerability", text: "I bounce back quickly from setbacks.", reverse: true },
+    { id: "n7", kind: "likert", dimension: "neuroticism", facet: "anxiety", text: "I'm relaxed most of the time.", reverse: true },
+    { id: "n8", kind: "likert", dimension: "neuroticism", facet: "anger", text: "I get irritated easily." },
+    { id: "n9", kind: "likert", dimension: "neuroticism", facet: "low_mood", text: "I rarely feel low for long.", reverse: true },
+    { id: "n10", kind: "likert", dimension: "neuroticism", facet: "self_consciousness", text: "I feel awkward around people I don't know well." },
+    { id: "n11", kind: "likert", dimension: "neuroticism", facet: "immoderation", text: "I can easily stop myself from overdoing it.", reverse: true },
+    { id: "n12", kind: "likert", dimension: "neuroticism", facet: "vulnerability", text: "I panic easily when things pile up." },
+  ],
+};

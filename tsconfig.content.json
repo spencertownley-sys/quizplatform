@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": { "incremental": false },
+  "include": ["src/lib/engine/**/*.ts", "src/content/**/*.ts"]
+}

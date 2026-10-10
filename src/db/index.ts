@@ -9,10 +9,16 @@ let _db: PostgresJsDatabase<typeof schema> | undefined;
 export function db() {
   if (!_db) {
     // prepare:false keeps this compatible with transaction-mode poolers (Supabase, Neon).
-    const client = postgres(requireEnv("DATABASE_URL"), { prepare: false, max: 5 });
+    const client = postgres(requireEnv("DATABASE_URL"), {
+      prepare: false,
+      max: Number(process.env.DATABASE_POOL_SIZE ?? 5),
+      onnotice: () => {},
+    });
     _db = drizzle(client, { schema });
   }
   return _db;
 }
+
+export const hasDatabase = () => !!process.env.DATABASE_URL;
 
 export * as t from "./schema";

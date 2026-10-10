@@ -1,0 +1,556 @@
+import type { Outcome } from "@/lib/engine/types";
+import { list, md } from "./text";
+
+export const deepWinter: Outcome = {
+  key: "deep-winter",
+  name: "Deep Winter",
+  tagline: "Deep, cool and striking: you wear drama without effort.",
+  emoji: "🌑",
+  summary:
+    "Your answers point to Deep Winter: deep overall coloring with a cool lean and a clear, high-contrast quality. Deep, cool colors like black, true red, emerald, sapphire and burgundy are likely to make you look striking, while pale pastels, golden browns and earthy shades can wash you out.",
+  about: md(
+    "Deep Winter is one of the 12 seasons in seasonal color analysis. Its defining trait is depth, with coolness as the secondary trait. People with this coloring tend to have dark brown to black hair, dark brown, black-brown or deep hazel eyes (and sometimes strikingly light eyes against dark hair), and skin with a cool or cool-neutral undertone. Skin can range from fair to very deep; what defines the season is the strength and depth of the overall coloring.",
+    "The overall impression is dramatic and strong, often with clear contrast between hair, skin and the whites of the eyes. Deep Winters can carry the darkest, most intense colors without being overwhelmed, while pale, dusty or warm earthy shades can make them look tired.",
+    "The Deep Winter palette is full of deep, cool, clear colors: black, charcoal, navy, true red, burgundy, emerald, pine, sapphire, royal blue, deep purple, magenta and deep teal, with pure white and icy tones as accents. Silver, platinum and gunmetal are the most flattering metals, and shiny gold can work in small doses.",
+    "Deep Winter sits next to Deep Autumn, which shares its depth but is warmer and softer, and Cool Winter, which shares its coolness but is less deep. People of many ethnic backgrounds are Deep Winters. The season describes a color harmony, not a skin tone, and the label is a starting point rather than a rule.",
+  ),
+  snapshot: [
+    "Season: Deep Winter, meaning deep first, then cool, with clear, high contrast.",
+    "Signature colors: true red, emerald, sapphire, burgundy, deep purple and magenta.",
+    "Best neutrals: black, charcoal, navy, deep cool brown and pure white.",
+    "Best metals: silver, platinum and gunmetal; shiny gold in small doses.",
+    "Go easy on: pale pastels, orange, camel, mustard, golden brown and dusty shades.",
+    "Neighbor seasons to borrow from: Deep Autumn and Cool Winter.",
+  ],
+  deep: [
+    {
+      title: "Your palette and why it works",
+      teaser:
+        "Your coloring is deep, cool and clear, so your best colors carry the same depth and intensity. When a color matches you, your skin looks smooth, your eyes look brighter and the effect is effortlessly dramatic.",
+      body: md(
+        "Color analysis works on a simple idea: colors near your face either echo your natural coloring or compete with it. For a Deep Winter, depth comes first. Your hair, eyes and skin carry a lot of strength, so deep colors echo that while pale or dusty colors can make you look washed out.",
+        "Coolness is your second trait. Your undertone leans cool or cool-neutral, so blue-based colors harmonize with your skin while golden, earthy colors can make it look sallow or uneven. Your coloring is also clear rather than muted, with noticeable contrast, so saturated, clean colors suit you better than smoky or dusty ones.",
+        "Your strongest colors include:",
+        list(
+          "Black, charcoal and navy as your core neutrals.",
+          "True red, blue-red and cherry.",
+          "Burgundy, wine and black cherry.",
+          "Emerald, pine and deep spruce.",
+          "Sapphire, royal blue and deep cobalt.",
+          "Deep purple, amethyst and aubergine.",
+          "Magenta and deep fuchsia.",
+          "Pure white and icy tones as accents.",
+        ),
+        "Look at your swatches: every color is deep, cool and clear, like jewels on dark velvet. Nothing is golden, earthy or dusty.",
+        "Try a test in daylight. Hold an emerald or true red item under your chin, then a camel or pastel peach one. With your colors, your skin should look smoother and your eyes more intense. With warm or pale colors, you may see a yellowish or gray cast, or a face that looks tired.",
+        "Your palette is a range, not a fixed list. Any color that is deep, cool and clear will probably suit you. Deep Winters look especially striking in high-contrast combinations, such as black with white, navy with emerald, or charcoal with true red.",
+      ),
+    },
+    {
+      title: "Your best neutrals",
+      teaser:
+        "Deep Winters are one of the few seasons who can wear black right up to the face and look fantastic. Your neutrals are strong, cool and crisp, which makes building a polished wardrobe easy.",
+      body: md(
+        "Neutrals form the backbone of a wardrobe. For a Deep Winter, the classic dark neutrals that challenge other seasons are your natural allies. Your best neutrals echo your deep, cool coloring:",
+        list(
+          "Black, which suits you better than almost any other season.",
+          "Charcoal and dark gray for suits, coats and knitwear.",
+          "Navy and midnight blue as an alternative to black.",
+          "Deep cool brown or espresso with a cool lean, if you want brown.",
+          "Pure white for crisp shirts and contrast.",
+          "Cool taupe or deep gray-taupe as a softer option.",
+        ),
+        "Choose two as your base. Black and charcoal make a strong pair, and navy with pure white is another excellent option. Pure white is your crisp light layer.",
+        "For formal looks, black with pure white and silver jewelry is classic Deep Winter. For evening, deep jewel tones such as emerald, sapphire or burgundy velvet can look even more striking than black.",
+        "Denim suits you in dark indigo, black and crisp dark washes. Faded or yellowed denim can look dull next to your coloring.",
+        "When shopping, compare neutrals with your swatches in daylight. Many browns and beiges lean golden and many grays lean green or yellow. The right neutral will look crisp and deep next to your true red and emerald.",
+        "Avoid camel, khaki, tan and golden beige near your face; they can make deep, cool skin look sallow. If you love a lighter neutral, try pure white, icy gray or cool light gray instead.",
+        "Fabric matters too. Deep Winters look excellent in crisp, smooth or lustrous fabrics, such as satin, silk, leather, fine wool and velvet, which echo the clarity and depth of their coloring.",
+      ),
+    },
+    {
+      title: "Makeup colors",
+      teaser:
+        "Your best makeup is deep, cool and defined. Berry, wine and true red shades bring out your natural intensity, while orange, golden bronze and pale pinks can make your skin look ashy or sallow.",
+      body: md(
+        "These guidelines help you choose shades that harmonize with your deep, cool coloring, whether you wear full makeup or just a tinted balm. Always test in daylight.",
+        "Lips:",
+        list(
+          "Berry, wine, plum and deep rose are your everyday shades.",
+          "For a bold look, true red, blue-red, black cherry and deep fuchsia are your signature shades.",
+          "Cool nudes with a rose, mauve or cocoa base look more natural than peach or caramel nudes.",
+          "Matte, satin and glossy finishes all work; bold lips suit you especially well.",
+          "A berry or wine tinted balm is an easy everyday option.",
+        ),
+        "Cheeks:",
+        list(
+          "Berry, plum, deep rose and cool raspberry blushes give you a natural flush.",
+          "If you contour, choose a cool, deep shade rather than a golden bronzer.",
+        ),
+        "Eyes:",
+        list(
+          "Charcoal, plum, navy, deep emerald and silver shadows are your easy picks.",
+          "Black liner suits you; navy or deep plum liner is a softer alternative.",
+          "Black mascara is your best match.",
+          "Fill brows in a cool dark brown or soft black.",
+        ),
+        "For nails, true red, wine, black cherry, deep plum, navy and emerald echo your palette.",
+        "Shades to approach with care include orange, coral, peach, golden bronze, copper and warm brown. They tend to look ashy or orange on deep, cool skin.",
+        "If you want drama, you have more options than most: a black winged liner with a true red lip, or a plum smoky eye with a berry lip. For foundation, Deep Winters span a wide range of depths with cool, red, blue-red or neutral undertones, so always match your own skin rather than a season label.",
+      ),
+    },
+    {
+      title: "Hair colors",
+      teaser:
+        "Your hair is a big part of your dramatic contrast. Deep, cool and glossy shades usually look the most natural, while golden, brassy or very light shades can fight your coloring.",
+      body: md(
+        "Your natural hair color is part of what makes you a Deep Winter, so it already harmonizes with your skin and eyes. If you want to change it, aim for depth, coolness and shine.",
+        "Shades that tend to flatter a Deep Winter:",
+        list(
+          "Black and soft black.",
+          "Blue-black for very cool Deep Winters.",
+          "Cool espresso and deep cool brown.",
+          "Black cherry, burgundy or deep plum tones, as an accent or all-over.",
+          "Cool, subtle lowlights or dark burgundy glazes for dimension.",
+        ),
+        "Shades to be careful with:",
+        list(
+          "Golden, honey and caramel highlights, which can look brassy.",
+          "Copper and orange-red tones.",
+          "Light blonde of any kind, which can look disconnected from your eyes and brows.",
+          "Ash tones that dull your natural shine.",
+        ),
+        "Shine is especially important. Deep Winters look best when their hair has a glossy, reflective finish that echoes the clarity of their coloring. A gloss treatment can make dark hair look richer.",
+        "If you want a change without going lighter, consider a burgundy or black cherry glaze. It adds dimension while staying cool and deep.",
+        "When gray hair arrives, many Deep Winters look striking with salt-and-pepper or bright silver hair, especially paired with jewel tones and black. The contrast between silver hair and dark brows or eyes can be stunning. Some prefer to blend gray with cool dark lowlights for a gradual change.",
+        "For brows, choose a cool dark brown or soft black product. Avoid warm or reddish brow pencils, which can clash with your cool coloring.",
+      ),
+    },
+    {
+      title: "Colors to avoid near your face, and how to wear them anyway",
+      teaser:
+        "The colors most likely to fight your coloring are warm, earthy, pale and dusty. You don't need to give them up, but you'll want to wear them in ways that keep cool depth near your face.",
+      body: md(
+        "Colors that tend to clash with Deep Winter coloring include:",
+        list(
+          "Orange, rust, pumpkin and terracotta.",
+          "Camel, tan, golden beige and khaki.",
+          "Mustard and golden yellow.",
+          "Pale, dusty pastels like peach, dusty rose and powder blue.",
+          "Muted earth tones like olive, moss and mushroom.",
+          "Warm, golden browns.",
+        ),
+        "If a color clashes with your face, here's how to wear it anyway:",
+        list(
+          "Keep it away from your face. Camel trousers or an olive skirt affect your complexion far less than a top.",
+          "Add depth and coolness near your face. A black, navy or emerald top or scarf restores balance.",
+          "Find the cool, deep cousin. Swap camel for charcoal, rust for burgundy, mustard for icy lemon, olive for pine, and peach for icy pink.",
+          "Use it in prints mixed with your colors, so it appears only in small amounts.",
+          "Lean on your makeup. A berry lip and defined eyes can rebalance a difficult top.",
+          "Wear silver jewelry close to your face to bring coolness back.",
+        ),
+        "If you love camel coats, try a camel coat with a black or charcoal sweater and scarf underneath, so the color near your face is from your palette. If you love earth tones, look for deep, cool versions, such as pine, black cherry and deep teal. They give the same grounded, rich feeling while keeping your skin clear.",
+        "Remember that color analysis is a guide, not a rule. If a color makes you feel wonderful, wear it, and use these tricks to make it flatter you more.",
+      ),
+    },
+    {
+      title: "Building a capsule wardrobe from your palette",
+      teaser:
+        "A Deep Winter capsule wardrobe is built on black, charcoal and pure white, with jewel-toned accents. The result is a sharp, striking wardrobe where everything works together.",
+      body: md(
+        "A capsule wardrobe is a small set of pieces that all work together. Built from your palette, it means every outfit flatters you and getting dressed takes no time.",
+        "Step 1: choose your base neutrals. Pick two for trousers, skirts, outerwear and shoes. Black and charcoal are a strong pair for a Deep Winter. Add pure white as your light neutral.",
+        "Step 2: choose two or three accent colors. These go on tops, knitwear and dresses. Strong combinations include emerald and true red, sapphire and burgundy, or deep purple and magenta.",
+        "Step 3: add one statement color for special pieces, such as icy pink or deep teal.",
+        "A sample 15-piece Deep Winter capsule:",
+        list(
+          "Black wool coat and a charcoal blazer.",
+          "Black trousers, charcoal trousers and dark indigo jeans.",
+          "Pure white shirt, white T-shirt and a navy knit.",
+          "Emerald top, true red top and a sapphire sweater.",
+          "Burgundy or deep purple dress.",
+          "Black boots and a black or burgundy bag.",
+          "A printed scarf combining black, white and a jewel tone.",
+        ),
+        "Shopping tips: bring your swatches or a photo of them when you shop and check colors in daylight. Look for crisp, smooth or lustrous fabrics. Invest in quality neutrals, especially your coat and black basics.",
+        "Your next steps:",
+        list(
+          "Sort your closet into palette colors, near-misses and colors that fight you.",
+          "Choose your two base neutrals and one light neutral this week.",
+          "Swap one camel or beige piece for its cool, deep cousin, such as charcoal or navy.",
+          "Test emerald, true red and sapphire under your chin in daylight and pick your favorite accent.",
+          "Before each purchase, compare it with your swatches. If it looks golden or dusty beside them, skip it.",
+        ),
+      ),
+    },
+  ],
+};
+
+export const coolWinter: Outcome = {
+  key: "cool-winter",
+  name: "Cool Winter",
+  tagline: "Crisp, cool and bright: you shine in icy tones and jewel colors.",
+  emoji: "❄️",
+  summary:
+    "Your answers point to Cool Winter, sometimes called True Winter: clearly cool coloring with a crisp, clear quality and medium-to-deep depth. Blue-based colors like fuchsia, royal blue, icy pink and pure white are likely to make you look sharp and fresh, while orange, gold and earthy shades can make your skin look sallow.",
+  about: md(
+    "Cool Winter, also called True Winter, is one of the 12 seasons in seasonal color analysis. Its defining trait is coolness, with clarity as the secondary trait. People with this coloring tend to have a pink, rosy, blue-red or cool-neutral undertone, hair from cool dark brown to black (or striking salt-and-pepper and silver), and cool eyes such as blue, gray, cool brown or black-brown. Skin can range from very fair to very deep.",
+    "The overall impression is crisp, cool and clear, often with noticeable contrast between hair, skin and eyes. Cool Winters look their best in pure, blue-based colors and can look sallow or tired in warm, golden or muted shades.",
+    "The Cool Winter palette is full of cool, clear colors: pure white, black, charcoal, navy, icy blue, icy pink, royal blue, sapphire, fuchsia, blue-red, burgundy, emerald, pine and purple. Silver, platinum and white gold are the most flattering metals.",
+    "Cool Winter sits next to Cool Summer, which shares its coolness but is softer and lighter, and to Deep Winter and Clear Winter, its fellow winters. People of many backgrounds and skin depths can be Cool Winters. The season describes a color harmony, not a skin tone, and the label is a starting point rather than a rule.",
+  ),
+  snapshot: [
+    "Season: Cool Winter, meaning cool first, then clear, with medium-to-deep depth.",
+    "Signature colors: fuchsia, royal blue, icy pink, blue-red, emerald and purple.",
+    "Best neutrals: black, pure white, charcoal, navy and cool gray.",
+    "Best metals: silver, platinum and white gold.",
+    "Go easy on: orange, gold, camel, rust, olive and warm brown.",
+    "Neighbor seasons to borrow from: Cool Summer, Deep Winter and Clear Winter.",
+  ],
+  deep: [
+    {
+      title: "Your palette and why it works",
+      teaser:
+        "Your coloring is clearly cool and crisp, so your best colors are blue-based, clean and clear. When a color matches you, redness and shadows fade and your eyes and skin look bright and even.",
+      body: md(
+        "Color analysis works on a simple idea: colors near your face either echo your natural coloring or compete with it. For a Cool Winter, coolness comes first. Your undertone is pink, rosy, blue-red or cool-neutral, so blue-based colors harmonize with it while golden ones fight it and can make your skin look yellow or sallow.",
+        "Clarity is your second trait. Your coloring is crisp rather than muted, often with clear contrast between your hair, skin and eyes, so clean, saturated colors look better than dusty ones. Your depth is medium to deep, so you can carry strong colors easily.",
+        "Your strongest colors include:",
+        list(
+          "Pure white, black, charcoal and navy as neutrals.",
+          "Icy blue, icy pink, icy lavender and icy gray as light accents.",
+          "Royal blue, sapphire and cobalt.",
+          "Fuchsia, magenta and hot pink.",
+          "Blue-red and cherry red.",
+          "Burgundy and raspberry.",
+          "Emerald and pine green.",
+          "Purple, violet and plum.",
+        ),
+        "Look at your swatches: every color is cool, clear and clean, like snow, ice and jewels. Nothing is golden, earthy or dusty.",
+        "Try a test in daylight. Hold a royal blue or fuchsia item under your chin, then an orange or mustard one. With your colors, your skin should look smoother and your eyes clearer. With warm colors, you may see a yellowish cast, redness or shadows.",
+        "Your palette is a range, not a fixed list. Any color that is cool and clear will probably suit you. Cool Winters look especially sharp in high-contrast combinations, such as black with icy pink, navy with pure white, or charcoal with fuchsia.",
+      ),
+    },
+    {
+      title: "Your best neutrals",
+      teaser:
+        "Cool Winters have crisp, classic neutrals that look polished in any setting. Black, pure white, charcoal and navy give you a sharp foundation that makes every accent color look intentional.",
+      body: md(
+        "Neutrals form the backbone of a wardrobe. For a Cool Winter, the classic cool neutrals are natural allies. Your best neutrals echo your cool, crisp coloring:",
+        list(
+          "Black, which suits most Cool Winters very well.",
+          "Pure white for crisp shirts and contrast.",
+          "Charcoal and cool dark gray for suits, coats and knitwear.",
+          "Navy and true navy as an alternative to black.",
+          "Cool mid-gray and icy gray for softer pieces.",
+          "Cool taupe as a rare brown-family option.",
+        ),
+        "Choose two as your base. Black and pure white make a classic Cool Winter pair, and navy with charcoal is another strong option. Pure white is your crisp light layer.",
+        "For formal looks, black and white with silver jewelry is classic. For evening, sapphire, emerald or fuchsia can look even more striking than black.",
+        "Denim suits you in dark indigo, black and crisp, cool washes. Very faded or yellowed denim can look dull next to your coloring.",
+        "When shopping, compare neutrals with your swatches in daylight. Many grays lean warm or greenish, and many whites lean cream. The right neutral will look crisp and clean beside your royal blue and fuchsia.",
+        "Avoid camel, tan, khaki and warm beige near your face; they can make cool skin look sallow. If you love lighter neutrals, try icy gray, pure white or cool light gray instead.",
+        "Fabric matters too. Cool Winters look excellent in crisp, smooth fabrics like poplin, satin, silk, fine wool and leather. These echo the clarity of your coloring, while very rough or heavily textured fabrics can look dull.",
+      ),
+    },
+    {
+      title: "Makeup colors",
+      teaser:
+        "Your best makeup is cool, clean and defined. Blue-based pinks, berries and true reds bring out your natural clarity, while coral, bronze and golden shimmer can make your skin look sallow.",
+      body: md(
+        "These guidelines help you choose shades that harmonize with your cool, clear coloring, whether you wear full makeup or just a tinted balm. Always test in daylight.",
+        "Lips:",
+        list(
+          "Cool pink, raspberry, berry and fuchsia are your everyday shades.",
+          "For a bold look, blue-red and cherry red are your signature reds.",
+          "Cool nudes with a pink or mauve base look more natural than peach or caramel nudes.",
+          "Satin, glossy and matte finishes all work; bold lips suit you well.",
+          "A berry or cool pink tinted balm is an easy everyday option.",
+        ),
+        "Cheeks:",
+        list(
+          "Cool pink, raspberry and berry blushes give you a natural flush.",
+          "Skip golden bronzers; a cool, neutral contour works better if you want definition.",
+        ),
+        "Eyes:",
+        list(
+          "Silver, charcoal, navy, plum and icy lavender shadows are your easy picks.",
+          "Black or navy liner defines your eyes beautifully.",
+          "Black mascara is usually your best match.",
+          "Fill brows in a cool ash-brown, cool dark brown or soft black.",
+        ),
+        "For nails, blue-red, fuchsia, berry, navy, icy pink and silver echo your palette.",
+        "Shades to approach with care include coral, orange, peach, golden bronze, copper and warm brown. They tend to sit on top of cool skin rather than blending with it.",
+        "If you want drama, you have great options: a blue-red lip with black liner, or a fuchsia lip with silver shadow. For foundation, many Cool Winters match pink, rosy, red or neutral-cool undertones, but always match your own skin rather than a season label.",
+      ),
+    },
+    {
+      title: "Hair colors",
+      teaser:
+        "Your hair is a big part of your crisp contrast. Cool, deep and glossy shades usually look the most natural, while golden or brassy tones can fight your coloring.",
+      body: md(
+        "Your natural hair color is part of what makes you a Cool Winter, so it already harmonizes with your skin and eyes. If you want to change it, aim for coolness and shine.",
+        "Shades that tend to flatter a Cool Winter:",
+        list(
+          "Cool dark brown and cool espresso.",
+          "Black and blue-black.",
+          "Cool ash brown for lighter Cool Winters.",
+          "Silver, salt-and-pepper and white, once gray arrives.",
+          "Subtle cool lowlights or a plum or burgundy glaze for dimension.",
+        ),
+        "Shades to be careful with:",
+        list(
+          "Golden, honey and caramel highlights.",
+          "Copper, auburn and orange-red tones.",
+          "Warm, golden blonde.",
+          "Brassy tones that appear as dye fades.",
+        ),
+        "Shine is important. Cool Winters look best with glossy hair that echoes the clarity of their coloring. A clear or cool-toned gloss can make dark hair look richer.",
+        "If brassiness appears after coloring, a blue or purple shampoo or a toning gloss can cool it down. Ask your stylist for cool or neutral tones.",
+        "Cool Winters often look spectacular when they go gray. Silver and white hair echo the icy tones in their palette, and the contrast with dark brows or bright eyes can be striking. Many Cool Winters find their palette works even better once they're silver. If you'd like a gradual transition, cool lowlights can blend gray as it grows.",
+        "For brows, choose a cool ash-brown, cool dark brown or soft black product. Avoid warm or reddish brow pencils, which can clash with your coloring. Well-defined brows also help keep your natural contrast if you ever lighten your hair.",
+      ),
+    },
+    {
+      title: "Colors to avoid near your face, and how to wear them anyway",
+      teaser:
+        "The colors most likely to fight your coloring are warm, earthy and muted. You don't need to give them up, but you'll want to wear them in ways that keep coolness and clarity near your face.",
+      body: md(
+        "Colors that tend to clash with Cool Winter coloring include:",
+        list(
+          "Orange, rust, pumpkin and terracotta.",
+          "Golden yellow and mustard.",
+          "Camel, tan, khaki and golden beige.",
+          "Olive, moss and warm earth greens.",
+          "Warm, golden browns.",
+          "Dusty, muted colors like mauve, sage and mushroom.",
+        ),
+        "If a color clashes with your face, here's how to wear it anyway:",
+        list(
+          "Keep it away from your face. Khaki trousers or an olive skirt affect your complexion far less than a top.",
+          "Add a cool buffer. A pure white, icy blue or navy scarf or collar near your face restores harmony.",
+          "Find the cool cousin. Swap camel for charcoal, orange for fuchsia, mustard for icy lemon, olive for pine, and warm brown for navy.",
+          "Use it in prints mixed with your colors, so it appears only in small amounts.",
+          "Lean on your makeup. A berry lip and cool pink blush can rebalance a difficult top.",
+          "Wear silver jewelry close to your face to add coolness back.",
+        ),
+        "If you love a camel coat, wear it over a black, navy or charcoal sweater and add a scarf in one of your colors. If you love earthy greens, try pine or emerald instead of olive. If you love warm reds, a blue-red or cherry gives the same energy with a far better result near your face. And if you love soft, dusty shades, look for their clearer, cooler versions, such as icy lavender instead of mauve.",
+        "Remember that color analysis is a guide, not a rule. If a color makes you feel great, wear it with confidence, and use these tricks to make it work for you.",
+      ),
+    },
+    {
+      title: "Building a capsule wardrobe from your palette",
+      teaser:
+        "A Cool Winter capsule wardrobe is built on black, white and charcoal, with icy and jewel-toned accents. The result is a crisp, modern wardrobe where every piece works together.",
+      body: md(
+        "A capsule wardrobe is a small set of pieces that all work together. Built from your palette, it means every outfit flatters you and getting dressed is simple.",
+        "Step 1: choose your base neutrals. Pick two for trousers, skirts, outerwear and shoes. Black and charcoal, or navy and charcoal, are strong pairs for a Cool Winter. Add pure white as your light neutral.",
+        "Step 2: choose two or three accent colors. These go on tops, knitwear and dresses. Strong combinations include royal blue and fuchsia, emerald and icy pink, or purple and blue-red.",
+        "Step 3: add one statement color for special pieces, such as icy blue or sapphire.",
+        "A sample 15-piece Cool Winter capsule:",
+        list(
+          "Black coat and a charcoal blazer.",
+          "Black trousers, navy trousers and dark indigo jeans.",
+          "Pure white shirt, white T-shirt and a cool gray knit.",
+          "Royal blue top, fuchsia top and an icy pink sweater.",
+          "Emerald or blue-red dress.",
+          "Black shoes and a black or navy bag.",
+          "A printed scarf combining black, white and a jewel tone.",
+        ),
+        "Shopping tips: bring your swatches or a photo of them when you shop and check colors in daylight. Look for crisp, smooth fabrics. Invest in quality neutrals, especially your coat and black or navy basics.",
+        "Your next steps:",
+        list(
+          "Sort your closet into palette colors, near-misses and colors that fight you.",
+          "Choose your two base neutrals and one light neutral this week.",
+          "Swap one camel or warm brown piece for its cool cousin, such as charcoal or navy.",
+          "Test royal blue, fuchsia and emerald under your chin in daylight and pick your favorite accent.",
+          "Before each purchase, compare it with your swatches. If it looks golden or dusty beside them, skip it.",
+        ),
+      ),
+    },
+  ],
+};
+
+export const clearWinter: Outcome = {
+  key: "clear-winter",
+  name: "Clear (Bright) Winter",
+  tagline: "Vivid, cool and high-contrast: you were made for pure color.",
+  emoji: "💎",
+  summary:
+    "Your answers point to Clear Winter, also called Bright Winter: coloring with high clarity and contrast, a cool-leaning undertone and medium depth. Pure, saturated colors like hot pink, cobalt, emerald, true red and crisp white are likely to make you look vibrant, while dusty, muted and earthy shades can make you look tired.",
+  about: md(
+    "Clear Winter, also known as Bright Winter, is one of the 12 seasons in seasonal color analysis. Its defining trait is clarity, meaning bright, saturated coloring with strong contrast, with coolness as the secondary trait. Clear Winters often have dark hair with light or medium skin and bright eyes, such as icy blue, clear green or clear dark brown with very bright whites. Contrast between hair, skin and eyes is usually striking.",
+    "The overall impression is vivid and electric. Clear Winters look their best in pure, saturated colors and crisp contrasts, and they can look dull, gray or tired in muted, dusty or earthy shades.",
+    "The Clear Winter palette is full of pure, cool-leaning brights: hot pink, true red, cobalt, emerald, bright turquoise, royal purple, lemon yellow and icy pastels, grounded by neutrals like black, pure white, navy, charcoal and icy gray. Polished silver, platinum and chrome are the most flattering metals.",
+    "Clear Winter sits next to Clear Spring, which shares its brightness but is warmer, and Cool Winter, which shares its coolness but is less bright. People of many backgrounds and skin depths can be Clear Winters. The season describes a color harmony, not a skin tone, and the label is a starting point rather than a rule.",
+  ),
+  snapshot: [
+    "Season: Clear (Bright) Winter, meaning clear first, then cool, with medium depth and high contrast.",
+    "Signature colors: hot pink, true red, cobalt, emerald, bright turquoise and lemon yellow.",
+    "Best neutrals: black, pure white, navy, charcoal and icy gray.",
+    "Best metals: polished silver, platinum and chrome.",
+    "Go easy on: dusty, muted and earthy shades like mauve, khaki, camel and rust.",
+    "Neighbor seasons to borrow from: Clear Spring and Cool Winter.",
+  ],
+  deep: [
+    {
+      title: "Your palette and why it works",
+      teaser:
+        "Your coloring is bright, crisp and full of contrast, so your best colors are pure and saturated, with a cool lean. When a color matches your intensity, your eyes look electric and your skin looks clear and even.",
+      body: md(
+        "Color analysis works on a simple idea: colors near your face either echo your natural coloring or compete with it. For a Clear Winter, clarity comes first. Your features have strong contrast and your eyes look bright against their whites, so you need colors with similar intensity. Muted or dusty colors look flat next to you and can make your skin look gray by comparison.",
+        "Coolness is your second trait. Your undertone leans cool or cool-neutral, so blue-based and balanced brights suit you better than golden ones. Your depth is medium, so you can wear light icy shades and deep shades alike, as long as they're clear.",
+        "Your strongest colors include:",
+        list(
+          "Black, pure white and navy as neutrals.",
+          "Hot pink, shocking pink and fuchsia.",
+          "True red and bright cherry.",
+          "Cobalt, electric blue and royal blue.",
+          "Emerald and bright jade.",
+          "Bright turquoise and clear teal.",
+          "Royal purple and bright violet.",
+          "Lemon yellow and icy pastels as accents.",
+        ),
+        "Look at your swatches: every color is pure and vivid, like neon signs against a night sky. Nothing is dusty, smoky or earthy.",
+        "Try a test in daylight. Hold a cobalt or hot pink item under your chin, then a khaki or dusty mauve one. With your colors, your eyes should look brighter and your skin clearer. With muted colors, you may see dullness or a sense that your face has faded.",
+        "Your palette is a range, not a fixed list. Any color that is clear, saturated and cool-leaning will probably suit you. Clear Winters look especially striking in bold, high-contrast pairings, such as black with hot pink, white with cobalt, or navy with emerald.",
+      ),
+    },
+    {
+      title: "Your best neutrals",
+      teaser:
+        "Clear Winters can wear the starkest contrasts of any season. Black and pure white together, which overwhelm most people, look natural on you and give your wardrobe a crisp backbone.",
+      body: md(
+        "Neutrals form the backbone of a wardrobe. For a Clear Winter, the crisp, high-contrast neutrals that challenge other seasons are your best friends:",
+        list(
+          "Black, especially paired with pure white or a bright color.",
+          "Pure, bright white for shirts, T-shirts and contrast.",
+          "Navy and midnight as an alternative to black.",
+          "Charcoal for suits and coats.",
+          "Icy gray and silver gray for a lighter option.",
+          "Cool taupe, sparingly, if you want a brown-family neutral.",
+        ),
+        "Choose two as your base. Black and pure white are the classic Clear Winter pair, and navy with icy gray is another strong option. Pure white is your crisp light layer.",
+        "For formal looks, black and white with polished silver is classic. For evening, a cobalt, emerald or hot pink piece can look even more striking than black alone.",
+        "Denim suits you in crisp dark indigo, black and bright white. Very faded, yellowed or gray-washed denim can look dull next to your coloring.",
+        "When shopping, compare neutrals with your swatches in daylight. Many neutrals lean beige, cream or greenish gray, which can look dull on you. The right neutral will look crisp and clean beside your cobalt and hot pink.",
+        "Avoid camel, khaki, tan and muddy browns near your face; they can make clear, cool coloring look tired. If you love a lighter neutral, pure white or icy gray will serve you better.",
+        "Fabric matters too. Clear Winters look excellent in crisp, smooth and shiny fabrics like poplin, satin, patent leather and silk, which echo the brightness of their coloring. Heavily textured or matte, rustic fabrics can look flat.",
+      ),
+    },
+    {
+      title: "Makeup colors",
+      teaser:
+        "Your best makeup is bright, clean and defined. Pure reds, hot pinks and crisp liners bring out your natural vividness, while muddy browns, dusty mauves and golden bronzers can make your face look dull.",
+      body: md(
+        "These guidelines help you choose shades that match your vivid, cool coloring, whether you wear full makeup or just a tinted balm. Always test in daylight.",
+        "Lips:",
+        list(
+          "Bright pink, cool rose and clear berry are your everyday shades.",
+          "For a bold look, true red, cherry, hot pink and fuchsia are your signature shades.",
+          "Cool nudes with a clear pink base look more natural than beige or brown nudes.",
+          "Glossy, satin and bold matte finishes all work; clear, saturated color is key.",
+          "A clear pink or berry tinted balm is an easy everyday option.",
+        ),
+        "Cheeks:",
+        list(
+          "Clear cool pink, bright rose and raspberry blushes give you a fresh flush.",
+          "Skip golden bronzers; a cool, neutral contour works better if you want definition.",
+        ),
+        "Eyes:",
+        list(
+          "Silver, charcoal, icy lavender, sapphire and emerald shadows are your easy picks.",
+          "Black liner suits you; cobalt, emerald or plum liners can look electric.",
+          "Black mascara is your best match.",
+          "Define brows in a cool dark brown or soft black that matches your hair.",
+        ),
+        "For nails, true red, hot pink, cobalt, emerald, black and silver echo your palette.",
+        "Shades to approach with care include muddy browns, dusty mauve, warm taupe, orange, coral, golden bronze and matte beige nudes. They tend to make clear coloring look flat or sallow.",
+        "If you want drama, you have plenty of options: black liner with a true red lip, or a cobalt liner with a hot pink lip. Clear Winters can carry bold makeup easily. For foundation, match your own skin's depth and undertone rather than a season label.",
+      ),
+    },
+    {
+      title: "Hair colors",
+      teaser:
+        "Your hair is a big part of your striking contrast. Deep, cool and glossy shades usually look the most natural, while muted, ashy or golden tones can dull your vivid coloring.",
+      body: md(
+        "Your natural hair color is part of what makes you a Clear Winter, so it already harmonizes with your skin and eyes. If you want to change it, keep it glossy, cool and in contrast with your skin.",
+        "Shades that tend to flatter a Clear Winter:",
+        list(
+          "Black and blue-black.",
+          "Deep cool brown and cool espresso.",
+          "Glossy dark brown with cool reflections.",
+          "Vivid accents like deep blue-black, burgundy or even a bright fashion color, for the adventurous.",
+          "Silver and white once gray arrives.",
+        ),
+        "Shades to be careful with:",
+        list(
+          "Golden, honey and caramel highlights.",
+          "Mousy or ashy tones that reduce your contrast.",
+          "Copper and orange-red tones.",
+          "Dusty or smoky mid-browns.",
+        ),
+        "Shine is essential. Clear Winters look best when their hair has a glossy, reflective finish. A clear or cool-toned gloss can make your color look more vivid.",
+        "If you want to go lighter, keep the contrast. A very light, icy platinum can work for some Clear Winters with light skin and bright eyes, but warm or golden blonde rarely does. Keep brows defined if you lighten your hair.",
+        "When gray hair arrives, Clear Winters often look stunning with bright silver or white hair, especially with saturated colors and black near the face. If gray looks dull at first, adding a bright lip and crisp white or black clothing restores your contrast.",
+        "For brows, a defined shape in cool dark brown or soft black usually works best. Avoid warm or reddish brow pencils, which can clash with your cool, clear coloring.",
+      ),
+    },
+    {
+      title: "Colors to avoid near your face, and how to wear them anyway",
+      teaser:
+        "The colors most likely to fight your coloring are muted, earthy and warm. You don't have to give them up, but you'll want to wear them strategically so your face stays bright.",
+      body: md(
+        "Colors that tend to clash with Clear Winter coloring include:",
+        list(
+          "Dusty, muted shades like mauve, dusty rose, sage and slate.",
+          "Earthy tones like rust, olive, mustard, khaki and terracotta.",
+          "Camel, tan and golden beige.",
+          "Muddy browns and taupe.",
+          "Soft, grayed pastels.",
+        ),
+        "If a color clashes with your face, here's how to wear it anyway:",
+        list(
+          "Keep it away from your face. Khaki trousers or an olive skirt affect your complexion much less than a top.",
+          "Add brightness near your face. A pure white collar, a cobalt scarf or a hot pink top brings clarity back.",
+          "Find the clear, cool cousin. Swap olive for emerald, rust for true red, mustard for lemon yellow, mauve for bright pink, and camel for icy gray.",
+          "Use it in prints mixed with your brights, so it appears only in small amounts.",
+          "Lean on bold makeup. A true red lip and black liner can balance a muted top.",
+          "Wear polished silver near your face to add brightness.",
+        ),
+        "Clear Winters often own plenty of muted, earthy pieces because they're fashionable. You don't need to throw them out; pair them with pure white, black or a bright accent near your face, and treat them as supporting players. Over time, as those pieces wear out, replace them with their clear, cool cousins.",
+        "Remember that color analysis is a guide, not a set of rules. If you feel great in a color, wear it, and use these tricks to make it work harder for you.",
+      ),
+    },
+    {
+      title: "Building a capsule wardrobe from your palette",
+      teaser:
+        "A Clear Winter capsule wardrobe is built on black, white and navy, with pure, saturated accents. The result is a bold, modern wardrobe where every piece makes a statement.",
+      body: md(
+        "A capsule wardrobe is a small set of pieces that all work together. Built from your palette, it means every outfit flatters you and getting dressed is fast.",
+        "Step 1: choose your base neutrals. Pick two for trousers, skirts, outerwear and shoes. Black and navy are a strong pair for a Clear Winter. Add pure white as your light neutral.",
+        "Step 2: choose two or three accent colors. These go on tops, knitwear and dresses. Strong combinations include cobalt and hot pink, emerald and true red, or turquoise and royal purple.",
+        "Step 3: add one statement color for special pieces, such as lemon yellow or icy pink.",
+        "A sample 15-piece Clear Winter capsule:",
+        list(
+          "Black coat and a navy blazer.",
+          "Black trousers, white jeans and dark indigo jeans.",
+          "Pure white shirt, white T-shirt and a black knit.",
+          "Cobalt top, hot pink top and an emerald sweater.",
+          "True red or royal purple dress.",
+          "Black shoes and a bright accent bag.",
+          "A bold printed scarf combining black, white and your brights.",
+        ),
+        "Shopping tips: bring your swatches or a photo of them when you shop and check colors in daylight. Look for crisp, smooth fabrics with some shine. Invest in quality neutrals, especially your coat and black basics.",
+        "Your next steps:",
+        list(
+          "Sort your closet into palette colors, near-misses and colors that fight you.",
+          "Choose your two base neutrals and one light neutral this week.",
+          "Pair one muted piece you love with a bright palette color near your face and see the difference.",
+          "Test cobalt, hot pink and emerald under your chin in daylight and pick your favorite accent.",
+          "Before each purchase, compare it with your swatches. If it looks dull beside them, skip it.",
+        ),
+      ),
+    },
+  ],
+};
