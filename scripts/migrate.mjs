@@ -1,6 +1,6 @@
 // Applies the SQL migrations in drizzle/ using only runtime dependencies,
 // so it works on hosts that prune devDependencies (drizzle-kit) after the build.
-// Railway runs it as the pre-deploy command (railway.json).
+// Railway runs it before `npm start` (railway.json), so every boot is migrated; it is a no-op when up to date.
 import { drizzle } from "drizzle-orm/postgres-js";
 import { migrate } from "drizzle-orm/postgres-js/migrator";
 import postgres from "postgres";
