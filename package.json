@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,6 +14,7 @@
     "test": "vitest run",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
+    "db:deploy": "node scripts/migrate.mjs",
     "db:studio": "drizzle-kit studio",
     "stripe:setup": "node --experimental-strip-types scripts/setup-stripe.ts",
     "content:registry": "node scripts/gen-registry.mjs",

@@ -4,7 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { AccountLinks } from "@/components/AccountLinks";
 import { Consent, CookieSettingsLink } from "@/components/Consent";
 import { BRAND, PROMISES } from "@/lib/brand";
-import { appUrl, clerkEnabled } from "@/lib/env";
+import { appUrl, clerkEnabled, devToolsEnabled } from "@/lib/env";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/reports" className="hidden text-muted hover:text-ink md:inline">
                 Find my reports
               </Link>
-              <AccountLinks clerk={clerk} />
+              {(clerk || devToolsEnabled()) && <AccountLinks clerk={clerk} />}
             </div>
           </nav>
         </header>

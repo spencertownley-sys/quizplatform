@@ -19,6 +19,10 @@ export function db() {
   return _db;
 }
 
-export const hasDatabase = () => !!process.env.DATABASE_URL;
+/**
+ * False while `next build` prerenders: hosts like Railway expose DATABASE_URL to
+ * the build, but the database's private network isn't reachable until runtime.
+ */
+export const hasDatabase = () => !!process.env.DATABASE_URL && process.env.NEXT_PHASE !== "phase-production-build";
 
 export * as t from "./schema";

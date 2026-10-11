@@ -58,6 +58,7 @@ None of these work in production.
 4. **Stripe:** `STRIPE_SECRET_KEY=sk_... APP_URL=https://<domain> npm run stripe:setup` creates every price, a Customer Portal configuration with cancellation, and the webhook; paste the printed lines into your env. Turn on Stripe Tax and set `STRIPE_AUTOMATIC_TAX=true`. Enable Apple Pay, Google Pay, Link, Cash App Pay and PayPal (where available) under Payment methods; Checkout shows whatever is enabled.
 5. **Email:** a Resend account with a verified domain → `RESEND_API_KEY`, `EMAIL_FROM`.
 6. **Hosting (Vercel):** import the repo, add the env vars and set `NEXT_PUBLIC_APP_URL`. `vercel.json` runs the win-back cron daily; set `CRON_SECRET` (and `WINBACK_PROMO_CODE` for the second email).
+   **Or Railway:** add a Postgres service and connect the repo; `railway.json` runs `npm run db:deploy` (migrations) before each deploy. Set `DATABASE_URL=${{Postgres.DATABASE_URL}}`, `APP_SECRET` and `NEXT_PUBLIC_APP_URL` before the first build (`NEXT_PUBLIC_*` values are baked in at build time). Railway has no `vercel.json` cron: add a cron service that calls `/api/cron/winback` with `Authorization: Bearer $CRON_SECRET`.
 7. **Analytics (optional):** `NEXT_PUBLIC_GA_ID` + `GA_API_SECRET`, and/or `NEXT_PUBLIC_POSTHOG_KEY`. Loaded only after cookie consent.
 8. **Admin:** put your email in `ADMIN_EMAILS`.
 
@@ -81,6 +82,7 @@ None of these work in production.
 | `npm run content:registry` | Register quiz files after adding one |
 | `npm run check:content` | Type-check quiz content only |
 | `npm run db:generate` / `db:migrate` | Create / apply migrations |
+| `npm run db:deploy` | Apply migrations without dev dependencies (used on deploy) |
 | `npm run stripe:setup` | Create Stripe prices, portal configuration and webhook |
 
 ## Adding a quiz
