@@ -1,11 +1,12 @@
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { clerkMiddleware } from "@clerk/nextjs/server";
+import { NextResponse } from "next/server";
 
-// Everything is public except the dashboard. Webhooks verify their own signatures.
-const isProtected = createRouteMatcher(["/dashboard(.*)"]);
+// Clerk needs its middleware to read sessions. Access checks live in each page and
+// route (requireUser, adminUser, ownership checks), not in path matching.
+// Without Clerk keys (local development) the proxy passes everything through.
+const clerk = !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY && !!process.env.CLERK_SECRET_KEY;
 
-export default clerkMiddleware(async (auth, req) => {
-  if (isProtected(req)) await auth.protect();
-});
+export default clerk ? clerkMiddleware() : () => NextResponse.next();
 
 export const config = {
   matcher: [

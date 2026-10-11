@@ -1,69 +1,16 @@
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import type Stripe from "stripe";
 import { db, t } from "@/db";
 import { requireEnv } from "@/lib/env";
-import { stripe } from "@/lib/stripe";
+import { markPaid, markRefunded, upsertSubscription } from "@/lib/fulfill";
+import { idOf, stripe } from "@/lib/stripe";
 
-const idOf = (v: string | { id: string } | null | undefined) => (typeof v === "string" ? v : v?.id ?? null);
-
-/** Newer Stripe API versions moved the period end onto subscription items. */
-function periodEnd(sub: Stripe.Subscription): Date | null {
-  const legacy = (sub as unknown as { current_period_end?: number }).current_period_end;
-  const fromItem = sub.items?.data?.[0]?.current_period_end;
-  const ts = fromItem ?? legacy;
-  return ts ? new Date(ts * 1000) : null;
-}
-
-async function upsertSubscription(sub: Stripe.Subscription) {
-  const userId = sub.metadata?.userId;
-  if (!userId) {
-    console.warn(`subscription ${sub.id} has no userId metadata; skipping`);
-    return;
-  }
-  const values = {
-    userId,
-    stripeSubscriptionId: sub.id,
-    stripeCustomerId: idOf(sub.customer)!,
-    status: sub.status,
-    currentPeriodEnd: periodEnd(sub),
-    cancelAtPeriodEnd: sub.cancel_at_period_end ? 1 : 0,
-    updatedAt: new Date(),
-  };
-  await db()
-    .insert(t.subscriptions)
-    .values(values)
-    .onConflictDoUpdate({ target: t.subscriptions.stripeSubscriptionId, set: values });
-}
-
-async function markCheckoutPaid(session: Stripe.Checkout.Session) {
-  await db()
-    .update(t.purchases)
-    .set({
-      status: "paid",
-      paidAt: new Date(),
-      email: session.customer_details?.email?.toLowerCase() ?? undefined,
-      stripeCustomerId: idOf(session.customer),
-      stripePaymentIntentId: idOf(session.payment_intent),
-      amountCents: session.amount_total ?? undefined,
-      currency: session.currency ?? undefined,
-    })
-    .where(eq(t.purchases.stripeSessionId, session.id));
-
-  if (session.mode === "subscription" && session.subscription) {
-    await upsertSubscription(await stripe().subscriptions.retrieve(idOf(session.subscription)!));
-  }
-  // TODO(email): send receipt with the result link (and cancel link for subscriptions).
-  // TODO(analytics): send `purchase` to GA4 Measurement Protocol and PostHog server-side.
-}
-
-async function setStatusByPaymentIntent(pi: string | null, status: "refunded" | "disputed") {
-  if (!pi) return;
-  await db()
-    .update(t.purchases)
-    .set({ status, ...(status === "refunded" ? { refundedAt: new Date() } : {}) })
-    .where(eq(t.purchases.stripePaymentIntentId, pi));
-}
-
+/**
+ * Stripe webhooks. Handlers are idempotent: Stripe retries, and events can
+ * arrive out of order. Subscribe the endpoint to: checkout.session.completed,
+ * checkout.session.async_payment_succeeded, checkout.session.expired,
+ * customer.subscription.created/updated/deleted, charge.refunded, charge.dispute.created.
+ */
 export async function POST(req: Request) {
   const signature = req.headers.get("stripe-signature");
   if (!signature) return new Response("Missing signature", { status: 400 });
@@ -76,16 +23,32 @@ export async function POST(req: Request) {
     return new Response("Invalid signature", { status: 400 });
   }
 
-  // Handlers are idempotent: Stripe retries, and events can arrive out of order.
   switch (event.type) {
     case "checkout.session.completed":
     case "checkout.session.async_payment_succeeded": {
       const s = event.data.object;
-      if (s.payment_status === "paid" || s.payment_status === "no_payment_required") await markCheckoutPaid(s);
+      if (s.payment_status !== "paid" && s.payment_status !== "no_payment_required") break;
+      // Subscription first, so the receipt can show the renewal date.
+      if (s.mode === "subscription" && s.subscription) {
+        await upsertSubscription(await stripe().subscriptions.retrieve(idOf(s.subscription)!));
+        const email = s.customer_details?.email?.toLowerCase();
+        if (email) await db().update(t.subscriptions).set({ email }).where(eq(t.subscriptions.stripeSubscriptionId, idOf(s.subscription)!));
+      }
+      await markPaid({
+        stripeSessionId: s.id,
+        email: s.customer_details?.email,
+        customerId: idOf(s.customer),
+        paymentIntentId: idOf(s.payment_intent),
+        amountCents: s.amount_total,
+        currency: s.currency,
+      });
       break;
     }
     case "checkout.session.expired":
-      await db().update(t.purchases).set({ status: "expired" }).where(eq(t.purchases.stripeSessionId, event.data.object.id));
+      await db()
+        .update(t.purchases)
+        .set({ status: "expired" })
+        .where(and(eq(t.purchases.stripeSessionId, event.data.object.id), eq(t.purchases.status, "pending")));
       break;
     case "customer.subscription.created":
     case "customer.subscription.updated":
@@ -94,12 +57,17 @@ export async function POST(req: Request) {
       break;
     case "charge.refunded": {
       const charge = event.data.object;
-      if (charge.refunded) await setStatusByPaymentIntent(idOf(charge.payment_intent), "refunded");
+      const pi = idOf(charge.payment_intent);
+      if (!charge.refunded || !pi) break;
+      const [p] = await db().select({ id: t.purchases.id }).from(t.purchases).where(eq(t.purchases.stripePaymentIntentId, pi)).limit(1);
+      if (p) await markRefunded(p.id);
       break;
     }
-    case "charge.dispute.created":
-      await setStatusByPaymentIntent(idOf(event.data.object.payment_intent), "disputed");
+    case "charge.dispute.created": {
+      const pi = idOf(event.data.object.payment_intent);
+      if (pi) await db().update(t.purchases).set({ status: "disputed" }).where(eq(t.purchases.stripePaymentIntentId, pi));
       break;
+    }
   }
   return new Response("ok");
 }

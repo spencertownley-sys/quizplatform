@@ -17,22 +17,24 @@ Competitors charge $0.99–$1.99 for "results" that silently roll into $25–$50
 ## Functional requirements
 | ID | Requirement | Priority | Status |
 | --- | --- | --- | --- |
-| P-01 | Anonymous quiz-taking stored by guest session | Must | Done |
-| P-02 | Free headline result; per-quiz full-paywall option for A/B | Must | Field exists; full-paywall rendering TODO |
-| P-03 | Guest checkout by email via Stripe Checkout | Must | Done |
-| P-04 | Magic-link access to purchased reports | Must | Token links done; email TODO |
-| P-05 | Clerk accounts; claim guest purchases by verified email | Must | Done |
-| P-06 | Dashboard: results, reports, retake trends, recommendations | Must | Results + billing done; rest TODO |
-| P-07 | All-Access unlocks every Deep Report | Must | Done |
-| P-08 | Two-click self-serve cancellation (Stripe Customer Portal) | Must | Done (enable portal in Stripe) |
-| P-09 | PDF export of paid reports | Must | TODO |
-| P-10 | Shareable result card (OG image) | Must | TODO |
-| P-11 | Couples/compare mode with paid comparison report | Should | TODO |
-| P-12 | Bundles ($4.99 for 4 reports) | Should | TODO |
-| P-13 | Refund button; 30-day refund on one-time reports | Should | Refund webhook done; button TODO |
-| P-14 | Admin CMS for quizzes without a deploy | Must | TODO (quizzes are code for now) |
-| P-15 | Localization-ready strings | Could | TODO |
-| P-16 | Age gate (13+, 18+ for relationship/money) | Must | `minAge` field + notice; enforcement TODO |
+| P-01 | Anonymous quiz-taking stored by guest session | Must | Done (cookie + server record, browser autosave) |
+| P-02 | Free headline result; per-quiz full-paywall option for A/B | Must | Done (paywall mode free / full / A/B per quiz, set in /admin) |
+| P-03 | Guest checkout by email via Stripe Checkout | Must | Done; result page polls until the webhook unlocks |
+| P-04 | Magic-link access to purchased reports, re-sendable | Must | Done (permanent result links in emails; /reports re-sends them) |
+| P-05 | Clerk accounts; claim guest purchases by verified email | Must | Done (webhook + claim on dashboard load + same-browser claim) |
+| P-06 | Dashboard: results, reports, retake trends, recommendations | Must | Done |
+| P-07 | All-Access unlocks every Deep Report, retakes, compare | Must | Done |
+| P-08 | Two-click self-serve cancellation (dashboard and receipt email) | Must | Done (Customer Portal cancel flow; signed link in receipts) |
+| P-09 | PDF export of paid reports | Must | Done (@react-pdf/renderer; certificate page for ability tests) |
+| P-10 | Shareable result card (OG image) for Stories, TikTok, X | Must | Done (og, x, story, square sizes + public share page) |
+| P-11 | Couples/compare mode with paid comparison report | Should | Done ($1.99, unlocks for both) |
+| P-12 | Bundles ($4.99) | Should | Done (Relationship, Know Yourself, Career; sold once 3+ of their quizzes are live) |
+| P-13 | Refund button; 30-day refund on one-time reports | Should | Done (receipt link, result page, dashboard, admin) |
+| P-14 | Admin CMS for quizzes without a deploy | Must | Done (/admin: edit, publish, add from catalog; same linter as tests) |
+| P-15 | Localization-ready strings | Could | Not done |
+| P-16 | Age gate (13+, 18+ for relationship/money reports) | Must | Done (neutral birth-year screen, enforced on the server) |
+
+Also built from the conversion section: midpoint reveal, optional email before or after the result (A/B), personalized preview, three-option price card, real social proof with thresholds, Snapshot→Deep upgrade for the difference, second-purchase All-Access pitch, opted-in win-back emails, five A/B tests, first-party funnel metrics and server-side purchase events (GA4 Measurement Protocol, PostHog).
 
 ## Billing rules (non-negotiable)
 - One-time purchases never create a subscription.
